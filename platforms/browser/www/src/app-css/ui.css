@@ -1,0 +1,9 @@
+.no-content{
+    width: 100%;
+    padding-top: 30px;
+    text-align: center;
+}
+.no-content .fa{
+    font-size: 72px;
+    padding-bottom: 30px;
+}

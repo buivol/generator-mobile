@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Loading</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+          name='viewport'/>
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'"/>
+    <link href="_.css" rel="stylesheet"/>
+    <link href="__.css" rel="stylesheet"/>
+
+</head>
+<body class="ready">
+
+<!-- partial:tabs/login.html -->
+<div class="page-header login-page page" id="page-login">
+    <div class="container">
+        <div class="col-md-4 content-center">
+            <div class="card card-login card-plain">
+                <form class="form" id="form-login" method="" action="">
+                    <div class="header header-primary text-center">
+                        <div class="logo-container">
+                            <img src="img/logo-sma.png" alt="">
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="input-group form-group-no-border input-lg">
+                            <input type="text" class="form-control" placeholder="Логин" name="username">
+                        </div>
+                        <div class="input-group form-group-no-border input-lg">
+                            <input type="password" placeholder="Пароль" class="form-control" name="password"/>
+                        </div>
+                    </div>
+                    <div class="footer text-center">
+                        <button type="submit" class="btn btn-primary btn-round btn-lg btn-block">Войти</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- partial -->
+<!-- partial:tabs/_navbar.html -->
+<nav class="navbar navbar-expand-lg bg-white navbar-full navbar-static-top navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-translate">
+            <a class="navbar-brand" href="#">
+                PSF Panel / <span class="data-title">Генератор</span>
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navigation" aria-controls="navigation-index" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+            </button>
+
+
+        </div>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navigation">
+            <ul class="navbar-nav">
+                <li class="nav-item active" data-menu-page="main">
+                    <a class="nav-link menu-lin" href="#">Генератор</a>
+                </li>
+                <li class="nav-item" data-menu-page="presents">
+                    <a class="nav-link menu-lin" href="#">Презентации</a>
+                </li>
+                <li class="nav-item" data-menu-page="marks">
+                    <a class="nav-link menu-lin" href="#">Отметки</a>
+                </li>
+                <li class="nav-item" data-menu-page="groups">
+                    <a class="nav-link menu-lin" href="#">Группы</a>
+                </li>
+                <li class="nav-item" data-menu-page="prices">
+                    <a class="nav-link menu-lin" href="#">Прайсы</a>
+                </li>
+                <li class="nav-item" data-menu-page="presets">
+                    <a class="nav-link menu-link" href="/presets">Пресеты</a>
+                </li>
+                <li class="nav-item" data-menu-page="mails">
+                    <a class="nav-link menu-lin" href="#">Рассылка</a>
+                </li>
+                <li class="nav-item" data-menu-page="get">
+                    <a class="nav-link menu-lin" href="#">Скачать</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- partial -->
+<div class="content">
+    <div class="container">
+
+
+
+        <!-- partial:tabs/page_presets.html -->
+        <div class="page" id="page-presets">
+    <h2>список пресетов</h2>
+    <div class="card container">
+        <div class="no-content">
+            <i class="fa fa-clone" aria-hidden="true"></i>
+            <h3>У вас нет ни одного пресета</h3>
+        </div>
+    </div>
+    <button class="btn btn-info btn-round presets-create">Создать</button>
+
+
+</div>
+
+
+<!-- Modal Core -->
+<div class="modal fade" id="createPreset" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="createPresetLabel">Создать пресет</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label class="col-sm-4" for="presetName">Название</label>
+                        <input id="presetName" type="text" value="" placeholder="Название" class="form-control">
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="s-headertext" class="col-3 col-form-label">Текст в шапке
+                            презентации</label>
+                        <div class="col-9">
+				    <textarea class="form-control" rows="5" name="fields[headertext]">Адрес: Москва, ул. Монтажная д.2а
+Телефоны : 8(495) 775-44-73, 775-44-74, 799-08-87
+http://www.psfarfor.ru  E-mail: info@psf-group.ru</textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="s-creator" class="col-3 col-form-label">Автор презентации</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control" name="fields[creator]">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="s-colorheader" class="col-3 col-form-label">Фон шапки</label>
+                        <div class="col-9">
+                            <input type="color" class="form-control" name="fields[colorheader]">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="s-colortitle" class="col-3 col-form-label">Фон заголовков</label>
+                        <div class="col-9">
+                            <input type="color" class="form-control" name="fields[colortitle]">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="s-colorgrouptext" class="col-3 col-form-label">Цвет текста
+                            заголовков</label>
+                        <div class="col-9">
+                            <input type="color" class="form-control" name="fields[colorgrouptext]">
+                        </div>
+                    </div>
+                </form>
+                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
+                blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
+                ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It
+                is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the
+                all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day
+                however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of
+                Grammar.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Отменить</button>
+                <button type="button" class="btn btn-info btn-simple">Сохранить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- partial -->
+    </div>
+</div>
+
+
+<div class="preloader">
+    <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="cordova.js"></script>
+<!-- partial:tabs/initjs.html -->
+<script>
+    const INIT_URL = 'http://api.tryakin.ru/init';
+</script>
+<!-- partial -->
+<script src="_.js"></script>
+<script src="__.js"></script>
+</body>
+</html>
