@@ -102,8 +102,36 @@
     <h2>список пресетов</h2>
     <div class="card container">
         <div class="no-content">
-            <i class="fa fa-clone" aria-hidden="true"></i>
+            <i class="fa fa-clone"></i>
             <h3>У вас нет ни одного пресета</h3>
+            <button class="btn btn-info btn-round presets-create">Создать</button>
+        </div>
+    </div>
+
+    <div id="presets-items" class="row">
+        <div class="col-sm-6">
+            <div class="card preset-item">
+                asdasdasd
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card preset-item">
+                <h3>Название пресета</h3>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>Автор: <code>asdasd</code></p>
+                        <p>Изменён: <code>13:22 13.02.2017</code></p>
+                    </div>
+                    <div class="col-sm-6 h-dr h-mc">
+                        <button class="btn btn-info btn-icon  btn-icon-mini btn-round"><i class="fa fa-pencil"></i>
+                        </button>
+                        <button class="btn btn-info btn-icon  btn-icon-mini btn-round"><i class="fa fa-share-alt"></i>
+                        </button>
+                        <button class="btn btn-danger btn-icon  btn-icon-mini btn-round"><i class="fa fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <button class="btn btn-info btn-round presets-create">Создать</button>
@@ -119,10 +147,10 @@
                 <h4 class="modal-title" id="createPresetLabel">Создать пресет</h4>
             </div>
             <div class="modal-body">
-                <form>
+                <form id="form-preset">
                     <div class="form-group">
                         <label for="presetName">Название</label>
-                        <input id="presetName" type="text" value="" placeholder="Название" class="form-control">
+                        <input id="presetName" type="text" value="" class="form-control">
                     </div>
 
                     <div class="form-group">
@@ -223,11 +251,23 @@
                             </label>
                         </div>
                     </div>
+
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <input type="hidden" name="fields[groupedhide]" value="0">
+                            <input id="s-groupedhide" type="checkbox" value="1" name="fields[groupedhide]">
+                            <label for="s-groupedhide">
+                                Сворачивать группы
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Отменить</button>
+                        <button type="submit" class="btn btn-info btn-simple save-preset">Сохранить</button>
+                    </div>
                 </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Отменить</button>
-                <button type="button" class="btn btn-info btn-simple">Сохранить</button>
             </div>
         </div>
     </div>
@@ -249,6 +289,10 @@
         <div class="rect4"></div>
         <div class="rect5"></div>
     </div>
+</div>
+
+<div id="form-loader">
+
 </div>
 
 
