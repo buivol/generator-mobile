@@ -107,8 +107,6 @@
         </div>
     </div>
     <button class="btn btn-info btn-round presets-create">Создать</button>
-
-
 </div>
 
 
@@ -123,56 +121,109 @@
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label class="col-sm-4" for="presetName">Название</label>
+                        <label for="presetName">Название</label>
                         <input id="presetName" type="text" value="" placeholder="Название" class="form-control">
                     </div>
 
-                    <div class="form-group row">
-                        <label for="s-headertext" class="col-3 col-form-label">Текст в шапке
-                            презентации</label>
-                        <div class="col-9">
-				    <textarea class="form-control" rows="5" name="fields[headertext]">Адрес: Москва, ул. Монтажная д.2а
-Телефоны : 8(495) 775-44-73, 775-44-74, 799-08-87
-http://www.psfarfor.ru  E-mail: info@psf-group.ru</textarea>
+                    <div class="form-group">
+                        <label for="s-creator">Автор презентации</label>
+                        <input id="s-creator" type="text" class="form-control" name="fields[creator]">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="s-logo">Логотип презентаций</label>
+                        <input id="s-logo" type="text" class="form-control miscimage" name="fields[logo]">
+                    </div>
+                    <div class="form-group">
+                        <label for="s-pkname">ПК. Название</label>
+                        <input id="s-pkname" type="text" class="form-control" name="fields[pkname]">
+                    </div>
+                    <div class="form-group">
+                        <label for="s-pkheader">ПК. Картинка в шапке</label>
+                        <input id="s-pkheader" type="text" class="form-control miscimage" name="fields[pkheader]">
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <input type="hidden" name="fields[pksheets]" value="0">
+                            <input id="s-pksheets" type="checkbox" value="1"
+                                   name="fields[pksheets]" checked="">
+                            <label for="s-pksheets">
+                                Последняя коробка разделена на листы
+                            </label>
                         </div>
                     </div>
 
-                    <div class="form-group row">
-                        <label for="s-creator" class="col-3 col-form-label">Автор презентации</label>
-                        <div class="col-9">
-                            <input type="text" class="form-control" name="fields[creator]">
+                    <div class="form-group">
+                        <label for="s-p1name">1000. Название</label>
+                        <input id="s-p1name" type="text" class="form-control" name="fields[p1name]">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="s-p1header">1000. Картинка в шапке</label>
+                        <input id="s-p1header" type="text" class="form-control miscimage" name="fields[p1header]">
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <input type="hidden" name="fields[p1sheets]" value="0">
+                            <input id="s-p1sheets" type="checkbox" value="1" name="fields[p1sheets]" checked="">
+                            <label for="s-p1sheets">
+                                1000 разделена на листы
+                            </label>
                         </div>
                     </div>
 
-                    <div class="form-group row">
-                        <label for="s-colorheader" class="col-3 col-form-label">Фон шапки</label>
-                        <div class="col-9">
-                            <input type="color" class="form-control" name="fields[colorheader]">
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <input type="hidden" name="fields[p1active]" value="0">
+                            <input id="s-p1active" type="checkbox" value="1" name="fields[p1active]" checked="">
+                            <label for="s-p1active">
+                                Генерировать 1000
+                            </label>
                         </div>
                     </div>
 
-                    <div class="form-group row">
-                        <label for="s-colortitle" class="col-3 col-form-label">Фон заголовков</label>
-                        <div class="col-9">
-                            <input type="color" class="form-control" name="fields[colortitle]">
+                    <div class="form-group">
+                        <label for="s-p5name">500. Название</label>
+                        <input id="s-p5name" type="text" class="form-control" name="fields[p5name]">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="s-p5header">500. Картинка в шапке</label>
+                        <input id="s-p5header" type="text" class="form-control miscimage" name="fields[p5header]">
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <input type="hidden" name="fields[p5sheets]" value="0">
+                            <input id="s-p5sheets" type="checkbox" value="1" name="fields[p5sheets]" checked="">
+                            <label for="s-p5sheets">
+                                5000 разделена на листы
+                            </label>
                         </div>
                     </div>
 
-                    <div class="form-group row">
-                        <label for="s-colorgrouptext" class="col-3 col-form-label">Цвет текста
-                            заголовков</label>
-                        <div class="col-9">
-                            <input type="color" class="form-control" name="fields[colorgrouptext]">
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <input type="hidden" name="fields[p5active]" value="0">
+                            <input id="s-p5active" type="checkbox" value="1" name="fields[p5active]">
+                            <label for="s-p5active">
+                                Генерировать 500
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <input type="hidden" name="fields[grouped]" value="0">
+                            <input id="s-grouped" type="checkbox" value="1" name="fields[grouped]">
+                            <label for="s-grouped">
+                                Разделять на группы
+                            </label>
                         </div>
                     </div>
                 </form>
-                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-                blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
-                ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It
-                is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the
-                all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day
-                however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of
-                Grammar.
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Отменить</button>
@@ -181,6 +232,8 @@ http://www.psfarfor.ru  E-mail: info@psf-group.ru</textarea>
         </div>
     </div>
 </div>
+
+
 
 
         <!-- partial -->
