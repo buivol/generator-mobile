@@ -111,7 +111,7 @@
         <div class="no-content">
             <i class="fa fa-clone"></i>
             <h3>У вас нет ни одного прайса</h3>
-            <button class="btn btn-info btn-round presets-create">Создать</button>
+            <button class="btn btn-info btn-round price-group-create">Создать группу</button>
         </div>
     </div>
 
@@ -143,6 +143,57 @@
     </div>
     <button class="btn btn-info btn-round presets-create">Создать</button>
 </div>
+
+
+<!-- Modal Core -->
+<div class="modal fade" id="createPriceGroup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="createPresetLabel">Создать группу прайсов</h4>
+            </div>
+            <div class="modal-body">
+                <form id="form-price-group">
+                    <div class="form-group">
+                        <label for="priceGroupName">Название</label>
+                        <input id="priceGroupName" type="text" value="" name="name" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <input type="hidden" name="checkDouble" value="0">
+                            <input id="priceGroupCheckDouble" type="checkbox" value="1"
+                                   name="checkDouble" checked="">
+                            <label for="priceGroupCheckDouble">
+                                Проверять на дубли
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <input type="hidden" name="lastBox" value="0">
+                            <input id="priceGroupLastBox" type="checkbox" value="1"
+                                   name="lastBox" checked="">
+                            <label for="priceGroupLastBox">
+                                Последняя коробка
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-simple" data-dismiss="modal">Отменить</button>
+                        <button type="submit" class="btn btn-info btn-simple">Сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
         <!-- partial -->
         <!-- partial:tabs/page_presets.html -->
         <div class="page" id="page-presets">
