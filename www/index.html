@@ -73,7 +73,7 @@
                     <a class="nav-link menu-link" href="#">Отметки</a>
                 </li>
                 <li class="nav-item" data-menu-page="groups">
-                    <a class="nav-link menu-link" href="#">Группы</a>
+                    <a class="nav-link menu-link" href="/groups">Группы</a>
                 </li>
                 <li class="nav-item" data-menu-page="prices">
                     <a class="nav-link menu-link" href="/prices">Прайсы</a>
@@ -96,14 +96,73 @@
     <div class="container">
         <div id="preset-conf">
             <select id="preset-select">
-                <option>Тестовый cheked</option>
-                <option>Тестовый cheked</option>
-                <option>Тестовый cheked</option>
-                <option>Тестовый cheked</option>
+                <option>Загрузка...</option>
             </select>
         </div>
 
 
+        <!-- partial:tabs/page_groups.html -->
+        <div class="page" id="page-groups">
+    <h2>список групп</h2>
+    <div id="no-groups" class="card container">
+        <div class="no-content">
+            <i class="fa fa-clone"></i>
+            <h3>У вас нет ни одной группы</h3>
+            <button class="btn btn-info btn-round group-create">Создать группу</button>
+        </div>
+    </div>
+
+    <div id="prices-items" class="row">
+        <div class="col-sm-6">
+            <div class="card preset-item">
+                asdasdasd
+            </div>
+        </div>
+
+
+        <div class="col-sm-6">
+            <div class="card price-item">
+                <h3>Название группы</h3>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>Изменён: <code>13:22 13.02.2017</code> версия <code>21</code></p>
+                    </div>
+                    <div class="col-sm-6 h-dr h-mc actions actions-prices">
+                        <button class="btn btn-info btn-icon  btn-icon-mini btn-round action-add"><i class="fa fa-plus"></i>
+                        </button>
+                        <button class="btn btn-info btn-icon  btn-icon-mini btn-round action-edit"><i class="fa fa-pencil"></i>
+                        </button>
+                        <button class="btn btn-danger btn-icon  btn-icon-mini btn-round action-delete"><i class="fa fa-trash"></i>
+                        </button>
+                    </div>
+
+                    <div class="prices-sources">
+                        <div class="price-source row">
+                            <div class="col-md-6">
+                                <i class="fa fa-cloud"></i> <code>sadasd/asdasdsadasd/asdasdsadasd/asdasdsadasd/asdasdsadasd/asdasd.txt</code>
+                            </div>
+                            <div class="col-sm-6 h-dr h-mcactions actions-prices-sources">
+                                <button class="btn btn-info btn-icon  btn-icon-mini btn-round action-edit"><i class="fa fa-pencil"></i>
+                                </button>
+                                <button class="btn btn-danger btn-icon  btn-icon-mini btn-round action-delete"><i class="fa fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <button class="btn btn-info btn-round price-group-create">Создать группу</button>
+</div>
+
+
+
+
+        <!-- partial -->
         <!-- partial:tabs/page_prices.html -->
         <div class="page" id="page-prices">
     <h2>список прайсов</h2>
